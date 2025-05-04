@@ -1,6 +1,6 @@
 E-commerce website made with SpringBoot Java for back-end stuff. Utilized TailwindCSS for front-end stuff.
 
-This is just a demo website, no actual transaction will be made here. However, be careful still with your important information/s, technically - anyone can access your mysql database if not protected.
+This is just a demo website, no actual transaction will be made here. However, be careful still with your important information/s.
 
 Current Features:
 - Products are fetched from MySQL Database (Price, ItemName, ItemDesc, etc...)
