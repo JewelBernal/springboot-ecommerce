@@ -6,5 +6,8 @@ import jakarta.persistence.Entity;
 @Entity
 @DiscriminatorValue("Guitar")
 public class Guitar extends Product {
-
+  @Override
+  public String getCategory() {
+    return "guitar";
+  }
 }

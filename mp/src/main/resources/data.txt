@@ -1,6 +1,14 @@
-DELETE FROM product;
--- dev's note: deleting every app run to avoid product duplication and error
+dev's notes:
+"--" means commented
+btw, this file is originally "data.sql" but since this bitch is causing errors on the database, I removed it. Kept it as a ".txt" for reference purposes.
 
+
+
+-- DELETE FROM product;
+-- dev's note: deleting items everytime the app run to avoid product duplication and error
+
+-- -- Add quantity column for both product types
+-- ALTER TABLE product ADD COLUMN quantity INT NOT NULL DEFAULT 10;
 
 -- Guitars products
 INSERT INTO product (id, product_type, name, price, description, image_url) 
@@ -15,3 +23,14 @@ VALUES
 (4, 'Pedal', 'Ibanez TS9 Tube Screamer Overdrive Pedal', '5,767.57', 'Distortion/Overdrive guitar effect pedal for rich tones.', '../img/ts9-1.webp'),
 (5, 'Pedal', 'Boss RC-505 Mk2 Loop Station Tabletop Looper', '34,612.80', 'Tabletop Loop Station with 5 Stereo Tracks, 2 XLR Mic Inputs with Phantom Power, 2 Stereo Line Input Pairs, Onboard FX, Rhythm Generator, and Looping Controls', '../img/looper-1.webp'),
 (6, 'Pedal', 'Boss DC-2W Waza Craft Dimension C Pedal', '11,438.44', 'Dimensional Chorus Effects Pedal, with Stereo I/O and 2 Voicing Modes.', '../img/dc2-1.webp');
+
+-- -- Orders table
+-- CREATE TABLE IF NOT EXISTS orders (
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+--     product_id BIGINT NOT NULL,
+--     quantity INT NOT NULL,
+--     total_price DECIMAL(10,2) NOT NULL,
+--     credit_card VARCHAR(16) NOT NULL,
+--     order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--     FOREIGN KEY (product_id) REFERENCES product(id)
+-- );
