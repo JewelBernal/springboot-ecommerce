@@ -1,3 +1,5 @@
+GitHub deleted something in here; currently not working. Fixing it. ;)
+
 E-commerce website made with SpringBoot Java for back-end stuff. Utilized TailwindCSS for front-end stuff.
 
 This is just a demo website, no actual transaction will be made here. However, be careful still with your important information/s.
